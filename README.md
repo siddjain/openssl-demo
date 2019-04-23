@@ -23,6 +23,7 @@ tls.pem: OK
 - The [rand_serial](https://www.openssl.org/docs/manmaster/man1/ca.html) command line option to generate random serial number did not work for me.  
 - Openssl is very finicky and it looks like it is sensitive to the order of command line options.  
 - You can see the version of OpenSSL by running `openssl version`.  
+- "The ca utility was originally meant as an example of how to do things in a CA. It was not supposed to be used as a full blown CA itself: nevertheless some people are using it for this purpose." [1](https://www.openssl.org/docs/manmaster/man1/ca.html)
  
 # Troubleshooting
 Error:
