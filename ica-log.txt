@@ -1,0 +1,111 @@
+WITSC02X6385JGH:openssl-demo sjain68$ ./ica.sh
+Generating a 256 bit EC private key
+writing new private key to 'ica.key'
+-----
+Certificate Request:
+    Data:
+        Version: 0 (0x0)
+        Subject: C=US, ST=New York, L=Brooklyn, O=ABC Corp, OU=client, OU=abc, CN=abc.com
+        Subject Public Key Info:
+            Public Key Algorithm: id-ecPublicKey
+                Public-Key: (256 bit)
+                pub: 
+                    04:f3:87:ca:66:54:e0:23:35:a2:bb:03:e2:8b:c4:
+                    91:7d:96:16:9c:69:b2:e6:f6:e1:ad:db:fc:2b:5d:
+                    d3:bc:c6:18:1a:bd:81:6c:c7:d4:f9:f6:4c:0f:8d:
+                    58:46:d8:81:66:11:90:9c:8d:78:93:5b:d6:f2:d4:
+                    b3:23:45:60:c1
+                ASN1 OID: prime256v1
+                NIST CURVE: P-256
+        Attributes:
+        Requested Extensions:
+            X509v3 Key Usage: critical
+                Certificate Sign, CRL Sign
+            X509v3 Basic Constraints: critical
+                CA:TRUE, pathlen:0
+            X509v3 Subject Key Identifier: 
+                B9:24:F4:43:37:0A:52:DE:70:DC:6F:68:AD:84:94:55:A5:28:BB:C0
+    Signature Algorithm: ecdsa-with-SHA256
+         30:44:02:20:42:f3:ee:04:2d:d7:26:29:14:32:4a:ce:b3:78:
+         2c:da:ec:da:b4:4f:e7:22:07:ab:49:4e:01:bd:75:94:a7:d7:
+         02:20:4b:99:c9:19:cd:3a:c1:bb:98:ba:54:eb:1e:a5:17:3d:
+         6c:90:58:85:26:08:2e:84:a9:29:31:85:bf:de:52:f0
+-----BEGIN CERTIFICATE REQUEST-----
+MIIBhjCCAS0CAQAwdzELMAkGA1UEBhMCVVMxETAPBgNVBAgMCE5ldyBZb3JrMREw
+DwYDVQQHDAhCcm9va2x5bjERMA8GA1UECgwIQUJDIENvcnAxDzANBgNVBAsMBmNs
+aWVudDEMMAoGA1UECwwDYWJjMRAwDgYDVQQDDAdhYmMuY29tMFkwEwYHKoZIzj0C
+AQYIKoZIzj0DAQcDQgAE84fKZlTgIzWiuwPii8SRfZYWnGmy5vbhrdv8K13TvMYY
+Gr2BbMfU+fZMD41YRtiBZhGQnI14k1vW8tSzI0VgwaBUMFIGCSqGSIb3DQEJDjFF
+MEMwDgYDVR0PAQH/BAQDAgEGMBIGA1UdEwEB/wQIMAYBAf8CAQAwHQYDVR0OBBYE
+FLkk9EM3ClLecNxvaK2ElFWlKLvAMAoGCCqGSM49BAMCA0cAMEQCIELz7gQt1yYp
+FDJKzrN4LNrs2rRP5yIHq0lOAb11lKfXAiBLmckZzTrBu5i6VOsepRc9bJBYhSYI
+LoSpKTGFv95S8A==
+-----END CERTIFICATE REQUEST-----
+Using configuration from rca-sign.cnf
+Check that the request matches the signature
+Signature ok
+Certificate Details:
+        Serial Number: 9873554804106481144 (0x8905e9c8311e4df8)
+        Validity
+            Not Before: Apr 23 19:18:06 2019 GMT
+            Not After : Apr 22 19:18:06 2020 GMT
+        Subject:
+            countryName               = US
+            stateOrProvinceName       = New York
+            organizationName          = ABC Corp
+            organizationalUnitName    = client
+            organizationalUnitName    = abc
+            commonName                = abc.com
+        X509v3 extensions:
+            X509v3 Authority Key Identifier: 
+                keyid:68:42:C1:D6:CB:61:92:9D:39:14:B9:3C:6D:AF:5E:F6:A1:42:B5:29
+
+            X509v3 Key Usage: critical
+                Certificate Sign, CRL Sign
+            X509v3 Basic Constraints: critical
+                CA:TRUE, pathlen:0
+            X509v3 Subject Key Identifier: 
+                B9:24:F4:43:37:0A:52:DE:70:DC:6F:68:AD:84:94:55:A5:28:BB:C0
+Certificate is to be certified until Apr 22 19:18:06 2020 GMT (365 days)
+Sign the certificate? [y/n]:y
+
+
+1 out of 1 certificate requests certified, commit? [y/n]y
+Write out database with 1 new entries
+Data Base Updated
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 9873554804106481144 (0x8905e9c8311e4df8)
+    Signature Algorithm: ecdsa-with-SHA256
+        Issuer: C=US, ST=CA, L=San Francisco, O=Uber, CN=uber.com
+        Validity
+            Not Before: Apr 23 19:18:06 2019 GMT
+            Not After : Apr 22 19:18:06 2020 GMT
+        Subject: C=US, ST=New York, O=ABC Corp, OU=client, OU=abc, CN=abc.com
+        Subject Public Key Info:
+            Public Key Algorithm: id-ecPublicKey
+                Public-Key: (256 bit)
+                pub: 
+                    04:f3:87:ca:66:54:e0:23:35:a2:bb:03:e2:8b:c4:
+                    91:7d:96:16:9c:69:b2:e6:f6:e1:ad:db:fc:2b:5d:
+                    d3:bc:c6:18:1a:bd:81:6c:c7:d4:f9:f6:4c:0f:8d:
+                    58:46:d8:81:66:11:90:9c:8d:78:93:5b:d6:f2:d4:
+                    b3:23:45:60:c1
+                ASN1 OID: prime256v1
+                NIST CURVE: P-256
+        X509v3 extensions:
+            X509v3 Authority Key Identifier: 
+                keyid:68:42:C1:D6:CB:61:92:9D:39:14:B9:3C:6D:AF:5E:F6:A1:42:B5:29
+
+            X509v3 Key Usage: critical
+                Certificate Sign, CRL Sign
+            X509v3 Basic Constraints: critical
+                CA:TRUE, pathlen:0
+            X509v3 Subject Key Identifier: 
+                B9:24:F4:43:37:0A:52:DE:70:DC:6F:68:AD:84:94:55:A5:28:BB:C0
+    Signature Algorithm: ecdsa-with-SHA256
+         30:45:02:20:37:92:42:f0:16:ab:f5:33:18:cf:79:31:9c:1d:
+         82:b8:e5:1e:2f:1d:0c:6d:d8:17:e0:64:ac:7e:94:5e:83:30:
+         02:21:00:f0:b4:cc:95:11:5d:1b:ea:12:45:e8:c9:91:98:4b:
+         a5:e3:6f:8e:cf:c3:b1:ed:d5:e5:3b:af:23:a4:e9:a0:84

@@ -1,0 +1,124 @@
+WITSC02X6385JGH:openssl-demo sjain68$ ./tls-example.sh 
+Generating a 256 bit EC private key
+writing new private key to 'tls.key'
+-----
+Certificate Request:
+    Data:
+        Version: 0 (0x0)
+        Subject: C=US, ST=New York, L=Brooklyn, O=Example Corp, OU=client, OU=FBI, CN=example.com
+        Subject Public Key Info:
+            Public Key Algorithm: id-ecPublicKey
+                Public-Key: (256 bit)
+                pub: 
+                    04:9d:b6:21:be:3b:dd:c3:00:56:e8:76:08:1e:bd:
+                    74:d8:e7:c9:e1:97:0e:9e:93:87:48:10:01:1e:79:
+                    7c:c3:15:0d:17:9e:bd:b0:9d:fe:11:76:d4:c4:c6:
+                    49:f7:a0:59:77:43:b1:fd:f4:86:0e:ee:f6:ef:9a:
+                    0a:e4:51:4c:23
+                ASN1 OID: prime256v1
+                NIST CURVE: P-256
+        Attributes:
+        Requested Extensions:
+            X509v3 Key Usage: critical
+                Digital Signature, Key Encipherment, Key Agreement
+            X509v3 Extended Key Usage: 
+                TLS Web Server Authentication, TLS Web Client Authentication
+            X509v3 Basic Constraints: critical
+                CA:FALSE
+            X509v3 Subject Key Identifier: 
+                1C:11:53:63:D5:14:74:46:99:A6:94:FC:DC:EF:C1:3F:9A:18:F3:B5
+            X509v3 Subject Alternative Name: 
+                DNS:example.com
+    Signature Algorithm: ecdsa-with-SHA256
+         30:46:02:21:00:f9:be:e7:87:72:c3:c8:9f:c8:b4:1a:23:9f:
+         76:98:1e:1f:d2:22:46:59:23:39:1e:b8:f5:ed:64:82:20:25:
+         13:02:21:00:84:48:a7:98:39:38:b8:ab:dc:11:38:0a:ec:a9:
+         d4:69:0b:5b:f5:b2:0c:c8:6e:40:9e:0f:ed:50:e7:63:25:a7
+-----BEGIN CERTIFICATE REQUEST-----
+MIIBwzCCAWgCAQAwfzELMAkGA1UEBhMCVVMxETAPBgNVBAgMCE5ldyBZb3JrMREw
+DwYDVQQHDAhCcm9va2x5bjEVMBMGA1UECgwMRXhhbXBsZSBDb3JwMQ8wDQYDVQQL
+DAZjbGllbnQxDDAKBgNVBAsMA0ZCSTEUMBIGA1UEAwwLZXhhbXBsZS5jb20wWTAT
+BgcqhkjOPQIBBggqhkjOPQMBBwNCAASdtiG+O93DAFbodggevXTY58nhlw6ek4dI
+EAEeeXzDFQ0Xnr2wnf4RdtTExkn3oFl3Q7H99IYO7vbvmgrkUUwjoIGGMIGDBgkq
+hkiG9w0BCQ4xdjB0MA4GA1UdDwEB/wQEAwIDqDAdBgNVHSUEFjAUBggrBgEFBQcD
+AQYIKwYBBQUHAwIwDAYDVR0TAQH/BAIwADAdBgNVHQ4EFgQUHBFTY9UUdEaZppT8
+3O/BP5oY87UwFgYDVR0RBA8wDYILZXhhbXBsZS5jb20wCgYIKoZIzj0EAwIDSQAw
+RgIhAPm+54dyw8ifyLQaI592mB4f0iJGWSM5Hrj17WSCICUTAiEAhEinmDk4uKvc
+ETgK7KnUaQtb9bIMyG5Ang/tUOdjJac=
+-----END CERTIFICATE REQUEST-----
+Using configuration from ica-sign.cnf
+Check that the request matches the signature
+Signature ok
+Certificate Details:
+        Serial Number: 9958702058065870295 (0x8a346ac222f7bdd7)
+        Validity
+            Not Before: Apr 23 19:27:17 2019 GMT
+            Not After : Apr 22 19:27:17 2020 GMT
+        Subject:
+            countryName               = US
+            stateOrProvinceName       = New York
+            organizationName          = Example Corp
+            organizationalUnitName    = client
+            organizationalUnitName    = FBI
+            commonName                = example.com
+        X509v3 extensions:
+            X509v3 Authority Key Identifier: 
+                keyid:B9:24:F4:43:37:0A:52:DE:70:DC:6F:68:AD:84:94:55:A5:28:BB:C0
+
+            X509v3 Key Usage: critical
+                Digital Signature, Key Encipherment, Key Agreement
+            X509v3 Extended Key Usage: 
+                TLS Web Server Authentication, TLS Web Client Authentication
+            X509v3 Basic Constraints: critical
+                CA:FALSE
+            X509v3 Subject Key Identifier: 
+                1C:11:53:63:D5:14:74:46:99:A6:94:FC:DC:EF:C1:3F:9A:18:F3:B5
+            X509v3 Subject Alternative Name: 
+                DNS:example.com
+Certificate is to be certified until Apr 22 19:27:17 2020 GMT (365 days)
+Sign the certificate? [y/n]:y
+
+
+1 out of 1 certificate requests certified, commit? [y/n]y
+Write out database with 1 new entries
+Data Base Updated
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 9958702058065870295 (0x8a346ac222f7bdd7)
+    Signature Algorithm: ecdsa-with-SHA256
+        Issuer: C=US, ST=New York, O=ABC Corp, OU=client, OU=abc, CN=abc.com
+        Validity
+            Not Before: Apr 23 19:27:17 2019 GMT
+            Not After : Apr 22 19:27:17 2020 GMT
+        Subject: C=US, ST=New York, O=Example Corp, OU=client, OU=FBI, CN=example.com
+        Subject Public Key Info:
+            Public Key Algorithm: id-ecPublicKey
+                Public-Key: (256 bit)
+                pub: 
+                    04:9d:b6:21:be:3b:dd:c3:00:56:e8:76:08:1e:bd:
+                    74:d8:e7:c9:e1:97:0e:9e:93:87:48:10:01:1e:79:
+                    7c:c3:15:0d:17:9e:bd:b0:9d:fe:11:76:d4:c4:c6:
+                    49:f7:a0:59:77:43:b1:fd:f4:86:0e:ee:f6:ef:9a:
+                    0a:e4:51:4c:23
+                ASN1 OID: prime256v1
+                NIST CURVE: P-256
+        X509v3 extensions:
+            X509v3 Authority Key Identifier: 
+                keyid:B9:24:F4:43:37:0A:52:DE:70:DC:6F:68:AD:84:94:55:A5:28:BB:C0
+
+            X509v3 Key Usage: critical
+                Digital Signature, Key Encipherment, Key Agreement
+            X509v3 Extended Key Usage: 
+                TLS Web Server Authentication, TLS Web Client Authentication
+            X509v3 Basic Constraints: critical
+                CA:FALSE
+            X509v3 Subject Key Identifier: 
+                1C:11:53:63:D5:14:74:46:99:A6:94:FC:DC:EF:C1:3F:9A:18:F3:B5
+            X509v3 Subject Alternative Name: 
+                DNS:example.com
+    Signature Algorithm: ecdsa-with-SHA256
+         30:44:02:20:5a:9a:d0:23:0c:0f:1d:d4:09:c2:d4:6b:c7:0a:
+         21:46:a2:34:3a:d3:59:1f:c5:92:11:22:d6:34:89:f0:60:99:
+         02:20:24:c9:3d:81:df:01:40:ee:dd:78:6d:ca:03:ec:5a:bd:
+         ad:08:4b:01:d9:48:81:1d:ea:09:e9:8a:5d:b7:57:02

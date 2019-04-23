@@ -1,0 +1,8 @@
+index.*
+*.swp
+*.html
+serial
+newcerts/
+*.pem
+*.key
+*.crt

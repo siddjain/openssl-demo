@@ -1,0 +1,32 @@
+[ req ]
+distinguished_name = req_distinguished_name
+attributes = req_attributes
+x509_extensions = v3_ca
+# without this the extensions in v3_ca section won't appear in the certificate
+req_extensions = v3_ca
+ 
+[ req_distinguished_name ]
+countryName = Country Name (2 letter code)
+countryName_min = 2
+countryName_max = 2
+stateOrProvinceName = State or Province Name (full name)
+localityName = Locality Name (eg, city)
+0.organizationName = Organization Name (eg, company)
+organizationalUnitName = Organizational Unit Name (eg, section)
+commonName = Common Name (eg, fully qualified host name)
+commonName_max = 64
+emailAddress = Email Address
+emailAddress_max = 64
+ 
+[ req_attributes ]
+challengePassword = A challenge password
+challengePassword_min = 4
+challengePassword_max = 20
+ 
+[ v3_ca ]
+keyUsage=critical,keyCertSign,cRLSign
+# - The pathlen of 0 allows a CA to issue certificates but the entities to which cert is issued
+#   cannot act as a CA
+# - see https://stackoverflow.com/a/6617814/147530 
+basicConstraints=critical,CA:true,pathlen:0
+subjectKeyIdentifier=hash
