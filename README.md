@@ -9,7 +9,12 @@ Run `rca.sh` to generate a root CA cert. It should output two files: `rca.pem` (
 Run `ica.sh`. See example log in file `ica-log.txt`
 
 # Generating TLS Certificate
-Run `tls-example.sh`. See example log in file `tls-example-log.txt`
+```
+SAN=DNS:www.example.com PEM=example.pem KEY=example.key CA=ica ./gen-tls.sh
+```
+
+Above will generate an example TLS certificate issued by ICA. Change CA to rca if you want the certificate to be issued by RCA. The SAN stands for SubjectAltName. Read about its importance [here](https://stackoverflow.com/a/5937270/147530): "the validator must check SAN first, and if SAN exists, then CN should not be checked."
+See example log in file `tls-example-log.txt`
 
 # Verifying TLS Certificate
 ```

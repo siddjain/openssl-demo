@@ -29,6 +29,6 @@ keyUsage=critical,keyEncipherment,digitalSignature,keyAgreement
 extendedKeyUsage=serverAuth,clientAuth
 basicConstraints=critical,CA:false
 subjectKeyIdentifier=hash
-# the string following DNS must match the URL used to connect to the server
-subjectAltName=DNS:example.com
+# https://security.stackexchange.com/a/86999/44139
+subjectAltName=${ENV::SAN}
 

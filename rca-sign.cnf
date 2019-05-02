@@ -5,7 +5,7 @@ default_ca    = my_ca_default
 [ my_ca_default ]
 
  dir            = .                     # top dir
- database       = $dir/index.txt        # index file.
+ database       = $dir/rca-index.txt        # index file.
  new_certs_dir  = $dir/newcerts         # new certs dir
 
  certificate    = $dir/rca.pem           # The CA cert

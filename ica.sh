@@ -3,10 +3,10 @@
 # - The script assumes a Root CA (RCA) has been created
 
 # Step 1: create a certificate signing request i.e., tell us what certificate you want
-#         the subj command line option is just there to show how to use it to avoid typing on command line
+#         the subj command line option can be added below to avoid typing on command line like this:
+#         -subj "/C=US/ST=New York/L=Brooklyn/O=ABC Corp/OU=client/OU=abc/CN=abc.com" \
 openssl req -new -nodes -newkey ec:<(openssl ecparam -name prime256v1) \
 -out ica-csr.pem -keyout ica.key \
--subj "/C=US/ST=New York/L=Brooklyn/O=ABC Corp/OU=client/OU=abc/CN=abc.com" \
 -config ica.cnf
 
 # Step 2: Print out the CSR for informational purposes
