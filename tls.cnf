@@ -30,5 +30,7 @@ extendedKeyUsage=serverAuth,clientAuth
 basicConstraints=critical,CA:false
 subjectKeyIdentifier=hash
 # https://security.stackexchange.com/a/86999/44139
+# the ${ENV::SAN} syntax does not work with LibreSSL so this syntax might raise an error on mac
+# we tested it works with OpenSSL 1.1.0g
 subjectAltName=${ENV::SAN}
 

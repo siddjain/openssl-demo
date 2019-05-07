@@ -13,8 +13,9 @@ Run `ica.sh`. See example log in file `ica-log.txt`
 SAN=DNS:www.example.com PEM=example.pem KEY=example.key CA=ica ./gen-tls.sh
 ```
 
-Above will generate an example TLS certificate issued by ICA. Change CA to rca if you want the certificate to be issued by RCA. The SAN stands for SubjectAltName. Read about its importance [here](https://stackoverflow.com/a/5937270/147530): "the validator must check SAN first, and if SAN exists, then CN should not be checked."
-See example log in file `tls-example-log.txt`
+Above will generate an example TLS certificate issued by ICA. Change CA to rca if you want the certificate to be issued by RCA. The SAN stands for SubjectAltName. Read about its importance [here](https://stackoverflow.com/a/5937270/147530): "the validator must check SAN first, and if SAN exists, then CN should not be checked." See example log in file `tls-example-log.txt`.
+
+Troubleshooting: The above command will give error with LibreSSL which comes installed on Mac. Setting the SAN using environment variable does not work with LibreSSL. To fix the error, open `tls.cnf` and comment out the line `subjectAltName=${ENV::SAN}` and set the SAN explicitly e.g., `subjectAltName=DNS:www.example.com`
 
 # Verifying TLS Certificate
 ```
